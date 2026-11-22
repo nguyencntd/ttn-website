@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://firesolutions-ttn.vn/sitemap.xml

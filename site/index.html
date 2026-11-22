@@ -1,0 +1,597 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#E31E24">
+<link rel="icon" href="assets/img/logo-mark.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&amp;family=Oswald:wght@500;600;700&amp;display=swap">
+<link rel="stylesheet" href="assets/css/style.css">
+<script src="assets/js/config.js"></script>
+<script>
+/* Chế độ chạy thật (cheDoNhap: false trong config.js): ẩn khung chờ và ghi chú ngay từ đầu, không bị nháy */
+if (!(window.TTN_CONFIG || {}).cheDoNhap) document.documentElement.classList.add('is-live');
+</script>
+<script>
+/* Ảnh có data-fb: không tìm thấy .jpg thì thử .jpeg, .png, .webp cùng tên; không có ảnh nào thì ẩn đi */
+window.addEventListener('error', function (e) {
+  var t = e.target, x = ['jpg', 'jpeg', 'png', 'webp'];
+  if (!t || t.tagName !== 'IMG' || !t.hasAttribute('data-fb')) return;
+  var m = (t.getAttribute('src') || '').match(/^(.*)\.(jpe?g|png|webp)$/i), n = +(t.getAttribute('data-fb') || 0);
+  if (m && n < x.length - 1) { t.setAttribute('data-fb', n + 1); t.src = m[1] + '.' + x[(x.indexOf(m[2].toLowerCase()) + 1) % x.length]; }
+  else t.hidden = true;
+}, true);
+</script>
+
+<title>TTN Fire Safety Solution — An Toàn Hôm Nay, Hạnh Phúc Ngày Mai</title>
+<meta name="description" content="Công ty TNHH PCCC & An Toàn TTN — Tư vấn thiết kế PCCC, An Toàn Vệ Sinh Lao Động, huấn luyện và đào tạo.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="TTN Fire Safety Solution — An Toàn Hôm Nay, Hạnh Phúc Ngày Mai">
+<meta property="og:description" content="Tư vấn thiết kế PCCC, An Toàn Vệ Sinh Lao Động, huấn luyện và đào tạo.">
+<meta property="og:image" content="https://firesolutions-ttn.vn/assets/img/anh/hero.jpg">
+<link rel="canonical" href="https://firesolutions-ttn.vn/">
+<link rel="preload" as="image" href="assets/img/anh/hero.jpg">
+</head>
+<body data-page="home">
+<a class="skip" href="#main">Bỏ qua điều hướng</a>
+<header class="site-header">
+  <div class="container">
+    <div class="header-inner">
+      <a class="brand" href="index.html" data-home aria-label="TTN Fire Safety Solution, về trang chủ">
+        <!-- LOGO: thay file assets/img/logo-mark.svg bằng logo chính thức -->
+        <img src="assets/img/logo-mark.svg" alt="" width="40" height="40">
+        <span class="brand-text"><strong>TTN Fire Safety Solution</strong><span>Safety Today – Happy Tomorrow</span></span>
+      </a>
+      <nav class="nav" id="site-nav" aria-label="Menu chính">
+        <a href="index.html" data-nav="home" data-home>Trang chủ</a>
+        <div class="nav-group">
+          <a class="nav-parent" href="gioi-thieu.html" data-group="about profile">Giới thiệu <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+          <div class="subnav">
+            <a href="gioi-thieu.html" data-nav="about">Về TTN</a>
+            <a href="ho-so-nang-luc.html" data-nav="profile">Hồ sơ năng lực</a>
+          </div>
+        </div>
+        <div class="nav-group">
+          <a class="nav-parent" href="index.html#dich-vu" data-group="svc-pccc svc-atvsld svc-huan-luyen">Dịch vụ <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+          <div class="subnav">
+            <a href="dich-vu-pccc.html" data-nav="svc-pccc">Tư vấn thiết kế PCCC</a>
+            <a href="dich-vu-atvsld.html" data-nav="svc-atvsld">An Toàn Vệ Sinh Lao Động</a>
+            <a href="dich-vu-huan-luyen.html" data-nav="svc-huan-luyen">Huấn luyện &amp; Đào tạo</a>
+          </div>
+        </div>
+        <div class="nav-group">
+          <a class="nav-parent" href="cong-noi-dung.html" data-group="hub news faq docs">Kiến thức <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+          <div class="subnav">
+            <a href="cong-noi-dung.html" data-nav="hub">Cổng kiến thức</a>
+            <a href="tin-tuc.html" data-nav="news">Tin tức &amp; video</a>
+            <a href="hoi-dap.html" data-nav="faq">Hỏi – đáp</a>
+            <a href="tai-lieu.html" data-nav="docs">Thư viện tài liệu</a>
+          </div>
+        </div>
+        <a href="tu-kiem-tra.html" data-nav="check">Tự kiểm tra</a>
+        <a href="index.html#lien-he" data-nav="contact">Liên hệ</a>
+        <a class="btn btn-red nav-cta-mobile" href="tu-van.html#dang-ky">Đăng ký tư vấn</a>
+      </nav>
+      <a class="btn btn-red btn-hotline" href="tel:0986637678" aria-label="Liên Hệ Hotline 098.6637.678">
+        <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+        <span>Liên Hệ Hotline</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Mở menu">
+        <svg class="i i-menu" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+        <svg class="i i-close" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+
+<main id="main">
+
+  <!-- ========== HERO: ảnh nền assets/img/anh/hero.jpg (Ảnh 1) ========== -->
+  <section class="hero hero-home">
+    <img class="hero-bg" src="assets/img/anh/hero.jpg" alt="" fetchpriority="high" data-fb>
+    <div class="container hero-content">
+      <h1><span class="hero-brand">TTN Fire Safety Solution</span><span class="hero-sub">Tư vấn thiết kế PCCC theo NFPA/FM Global</span></h1>
+      <a class="btn btn-red btn-lg" href="index.html#lien-he">Đăng ký tư vấn
+        <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+  </section>
+
+  <!-- Dải gọi lại nằm đè lên mép dưới ảnh -->
+  <div class="container quick-wrap">
+    <div class="quick">
+      <p class="quick-text"><strong>Cần tư vấn nhanh?</strong> Để lại số, kỹ sư TTN gọi lại cho bạn.</p>
+      <form class="callback" data-form data-success="Đã nhận số của bạn. Kỹ sư TTN sẽ gọi lại ngay khi có thể." aria-label="Yêu cầu gọi lại">
+  <input type="hidden" name="loai_form" value="Yêu cầu gọi lại">
+  <input type="hidden" name="_subject" value="[Website TTN] Yêu cầu gọi lại">
+  <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+  <div class="callback-row">
+    <label class="sr-only" for="cb-sdt">Số điện thoại</label>
+    <input id="cb-sdt" name="so_dien_thoai" type="tel" inputmode="tel" autocomplete="tel" pattern="[0-9 .+]{9,16}" title="Nhập số điện thoại hợp lệ" placeholder="Số điện thoại của bạn" required>
+    <button class="btn btn-red btn-lg" type="submit">Gọi lại cho tôi</button>
+  </div>
+  <p class="form-status" role="status" aria-live="polite"></p>
+</form>
+      <a class="quick-call" href="tel:0986637678">
+        <span class="icon-disc"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></span>
+        <span><span>Hotline 24/7</span><strong>098.6637.678</strong></span>
+      </a>
+    </div>
+  </div>
+
+  <!-- ========== KHÁCH HÀNG ========== -->
+  <section class="clients" aria-labelledby="clients-title">
+  <div class="container">
+    <h2 class="clients-title" id="clients-title">Khách hàng &amp; đối tác tiêu biểu</h2>
+  </div>
+  <!-- Thêm logo: thêm một <li> vào CẢ HAI nhóm bên dưới (nhóm thứ hai là bản lặp để dải chạy liền mạch) -->
+  <div class="marquee">
+    <ul class="marquee-track">
+      <li><img src="assets/img/doi-tac/pg.png" alt="P&amp;G" loading="lazy"></li>
+      <li><img src="assets/img/doi-tac/kimberly-clark.png" alt="Kimberly-Clark Professional" loading="lazy"></li>
+      <li><img src="assets/img/doi-tac/long-son.png" alt="Long Sơn Petrochemicals" loading="lazy"></li>
+      <li><img src="assets/img/doi-tac/hoang-ha.jpg" alt="Hoàng Hà" loading="lazy"></li>
+      <li><img src="assets/img/doi-tac/avery-dennison.png" alt="Avery Dennison" loading="lazy"></li>
+      <li aria-hidden="true"><img src="assets/img/doi-tac/pg.png" alt="" loading="lazy"></li>
+      <li aria-hidden="true"><img src="assets/img/doi-tac/kimberly-clark.png" alt="" loading="lazy"></li>
+      <li aria-hidden="true"><img src="assets/img/doi-tac/long-son.png" alt="" loading="lazy"></li>
+      <li aria-hidden="true"><img src="assets/img/doi-tac/hoang-ha.jpg" alt="" loading="lazy"></li>
+      <li aria-hidden="true"><img src="assets/img/doi-tac/avery-dennison.png" alt="" loading="lazy"></li>
+    </ul>
+  </div>
+</section>
+
+  <!-- ========== VỀ CHÚNG TÔI ========== -->
+  <section class="section" id="ve-chung-toi">
+    <div class="container about">
+      <h2 class="about-head">Dịch vụ của chúng tôi</h2>
+      <div class="about-block">
+        <div>
+          <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2c1 4 6 6 6 12a6 6 0 0 1-12 0c0-3 1.5-5 3-6.5.3 2 1.2 3.2 2.5 3.7C11 7.5 11 5 12 2z"/></svg>
+          <h3>Tư vấn thiết kế PCCC</h3>
+          <p>Giải pháp phù hợp công năng và tiêu chuẩn áp dụng.</p>
+        </div>
+        <div>
+          <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="m9 14 2 2 4-4"/></svg>
+          <h3>Đánh giá rủi ro ATVSLĐ</h3>
+          <p>Khảo sát thực tế, chỉ rõ mối nguy cần xử lý.</p>
+        </div>
+        <div>
+          <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="12" rx="1"/><path d="M12 15v4M8 21l4-2 4 2"/></svg>
+          <h3>Huấn luyện &amp; đào tạo</h3>
+          <p>Nội dung đúng quy định, dễ áp dụng tại nhà máy.</p>
+        </div>
+        <div>
+          <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 20 5v6c0 5-3.4 9.3-8 11-4.6-1.7-8-6-8-11V5z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg>
+          <h3>Đồng hành dài hạn</h3>
+          <p>Hỗ trợ kỹ thuật cả sau khi dự án hoàn thành.</p>
+        </div>
+      </div>
+      <div class="about-a"><figure class="ph ph-43" data-src="assets/img/anh/doi-ngu.jpg" data-alt="Đội ngũ kỹ sư TTN tại công trình">
+  <figcaption class="ph-label">
+    <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+    <strong>Ảnh 2 · Đội ngũ TTN tại công trình hoặc văn phòng</strong>
+    <span>assets/img/anh/doi-ngu.jpg · 4:3 · ≥ 1600px</span>
+  </figcaption>
+</figure>
+</div>
+      <div class="about-b"><figure class="ph ph-1610" data-src="assets/img/anh/ve-chung-toi.jpg" data-alt="Diễn tập chữa cháy tại hiện trường">
+  <figcaption class="ph-label">
+    <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+    <strong>Ảnh 3 · Hiện trường diễn tập hoặc thi công PCCC</strong>
+    <span>assets/img/anh/ve-chung-toi.jpg · 16:10 · ≥ 1400px</span>
+  </figcaption>
+</figure>
+</div>
+      <div class="about-text">
+        <p class="muted">Tư vấn PCCC theo NFPA/FM và tư vấn quy trình an toàn, giảm thiểu tai nạn cho nhà máy.</p>
+        <p class="muted">Chúng tôi đi cùng bạn từ thiết kế, nghiệm thu đến huấn luyện đội ngũ.</p>
+        <div class="about-actions">
+          <a class="btn btn-red" href="gioi-thieu.html">Về TTN</a>
+          <a class="call-inline" href="tel:0986637678">
+            <span class="icon-disc ghost"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></span>
+            <span><span>Gọi 24/7</span><strong>098.6637.678</strong></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== VIDEO GIỚI THIỆU: dán link YouTube vào videoGioiThieu trong assets/js/config.js ========== -->
+  <section class="video-band" aria-label="Video giới thiệu TTN">
+    <div class="container">
+      <div class="video-feature" data-intro-video>
+        <img class="video-poster" src="assets/img/anh/video.jpg" alt="" loading="lazy" data-fb>
+        <button class="video-play" type="button" data-intro-play aria-label="Phát video giới thiệu TTN">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg>
+        </button>
+        <div class="video-caption">
+          <h2>TTN tại công trình</h2>
+          <p>Khảo sát, thiết kế và huấn luyện cùng kỹ sư TTN.</p>
+        </div>
+        <p class="video-note" data-intro-note>Ảnh 17 · Khung chờ video giới thiệu 60–90 giây<br><span>Dán link YouTube vào videoGioiThieu trong assets/js/config.js · ảnh bìa: assets/img/anh/video.jpg</span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 3 TRỤ CỘT DỊCH VỤ ========== -->
+  <section class="services" id="dich-vu">
+    <div class="services-top no-head">
+      <div class="container">
+        <h2 class="sr-only">Ba trụ cột dịch vụ</h2>
+        <div class="service-grid">
+          <article class="service-card">
+            <figure class="ph ph-43" data-src="assets/img/anh/dich-vu-pccc.jpg" data-alt="Hệ thống đường ống chữa cháy tự động trong nhà xưởng">
+  <figcaption class="ph-label">
+    <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+    <strong>Ảnh 4 · Phòng bơm, đường ống sprinkler hoặc bản vẽ PCCC</strong>
+    <span>assets/img/anh/dich-vu-pccc.jpg · 4:3 · ≥ 1400px</span>
+  </figcaption>
+</figure>
+
+            <div class="service-body">
+              <span class="service-icon"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2c1 4 6 6 6 12a6 6 0 0 1-12 0c0-3 1.5-5 3-6.5.3 2 1.2 3.2 2.5 3.7C11 7.5 11 5 12 2z"/></svg></span>
+              <h3>Tư vấn thiết kế PCCC</h3>
+              <p class="intro">Hệ thống PCCC theo tiêu chuẩn Việt Nam và quốc tế.</p>
+              <ul class="dash">
+                <li>Tư vấn, thiết kế hệ thống PCCC theo tiêu chuẩn Việt Nam, NFPA, FM…</li>
+                <li>Thiết kế hệ thống chữa cháy tự động</li>
+                <li>Thiết kế hệ thống báo cháy</li>
+                <li>Tư vấn đánh giá rủi ro an toàn PCCC</li>
+                <li>Đánh giá tuân thủ PCCC theo FM Global cho bảo hiểm</li>
+                <li>Tư vấn nghiệm thu hệ thống PCCC</li>
+                <li>Tư vấn kiểm tra, bảo trì hệ thống bơm PCCC</li>
+              </ul>
+              <a class="link-arrow" href="dich-vu-pccc.html">Xem chi tiết dịch vụ <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            </div>
+          </article>
+          <article class="service-card">
+            <figure class="ph ph-43" data-src="assets/img/anh/dich-vu-atvsld.jpg" data-alt="Kỹ sư khảo sát an toàn lao động tại công trình">
+  <figcaption class="ph-label">
+    <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+    <strong>Ảnh 5 · Khảo sát an toàn tại xưởng, đồ bảo hộ đầy đủ</strong>
+    <span>assets/img/anh/dich-vu-atvsld.jpg · 4:3 · ≥ 1400px</span>
+  </figcaption>
+</figure>
+
+            <div class="service-body">
+              <span class="service-icon blue"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="m9 14 2 2 4-4"/></svg></span>
+              <h3>An Toàn Vệ Sinh Lao Động</h3>
+              <p class="intro">Nhận diện mối nguy, giảm thiểu tai nạn lao động.</p>
+              <ul class="dash blue">
+                <li>Khảo sát, đánh giá rủi ro và mối nguy trong lĩnh vực an toàn vệ sinh công nghiệp</li>
+                <li>Tư vấn, xây dựng, triển khai hệ thống an toàn</li>
+                <li>Tư vấn, xây dựng, triển khai quy trình an toàn để giảm thiểu tai nạn</li>
+                <li>Pháp luật về vệ sinh an toàn lao động Việt Nam</li>
+              </ul>
+              <a class="link-arrow" href="dich-vu-atvsld.html">Xem chi tiết dịch vụ <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            </div>
+          </article>
+          <article class="service-card">
+            <figure class="ph ph-43" data-src="assets/img/anh/dich-vu-huan-luyen.jpg" data-alt="Huấn luyện sử dụng bình chữa cháy">
+  <figcaption class="ph-label">
+    <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+    <strong>Ảnh 6 · Buổi huấn luyện hoặc diễn tập chữa cháy</strong>
+    <span>assets/img/anh/dich-vu-huan-luyen.jpg · 4:3 · ≥ 1400px</span>
+  </figcaption>
+</figure>
+
+            <div class="service-body">
+              <span class="service-icon navy"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="12" rx="1"/><path d="M12 15v4M8 21l4-2 4 2"/></svg></span>
+              <h3>Huấn luyện &amp; Đào tạo</h3>
+              <p class="intro">Huấn luyện đúng quy định, diễn tập sát thực tế.</p>
+              <ul class="dash navy">
+                <li>Huấn luyện an toàn theo nhóm theo quy định pháp luật</li>
+                <li>Tư vấn xây dựng chương trình đào tạo an toàn nội bộ</li>
+                <li>Tư vấn xây dựng hồ sơ PCCC cơ sở</li>
+                <li>Tư vấn xây dựng kế hoạch ứng phó sự cố và thực hiện diễn tập kế hoạch</li>
+              </ul>
+              <a class="link-arrow" href="dich-vu-huan-luyen.html">Xem chi tiết dịch vụ <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+    <!-- Dải tối: ảnh nền assets/img/anh/tieu-chuan.jpg (Ảnh 9) -->
+    <div class="band-dark">
+      <img class="band-bg" src="assets/img/anh/tieu-chuan.jpg" alt="" loading="lazy" data-fb>
+      <div class="container"><div class="standards">
+  <div><strong>NFPA</strong><span>Tiêu chuẩn PCCC Hoa Kỳ</span></div>
+  <div><strong>TCVN</strong><span>Tiêu chuẩn Việt Nam</span></div>
+  <div><strong>QCVN</strong><span>Quy chuẩn bắt buộc</span></div>
+  <div><strong>FM Global</strong><span>Đánh giá cho bảo hiểm</span></div>
+</div></div>
+    </div>
+  </section>
+
+  <!-- ========== QUY TRÌNH ========== -->
+  <section class="section" id="quy-trinh">
+    <div class="container">
+      <div class="section-head split-head">
+        <h2>Quy trình làm việc</h2>
+        <p>Bốn bước rõ ràng, bạn luôn biết dự án đang ở đâu.</p>
+      </div>
+      <div class="process">
+  <ol class="steps">
+    <li><span class="step-num">01</span><div><h3>Tiếp nhận yêu cầu</h3><p>Bạn gọi hotline hoặc để lại số điện thoại.</p></div></li>
+    <li><span class="step-num">02</span><div><h3>Khảo sát hiện trạng</h3><p>Kỹ sư ghi nhận thực tế tại công trình.</p></div></li>
+    <li><span class="step-num">03</span><div><h3>Đề xuất giải pháp</h3><p>Phương án rõ ràng, đúng tiêu chuẩn áp dụng.</p></div></li>
+    <li><span class="step-num">04</span><div><h3>Triển khai &amp; đồng hành</h3><p>Hỗ trợ đến khi nghiệm thu và cả sau đó.</p></div></li>
+  </ol>
+</div>
+
+    </div>
+  </section>
+
+  <!-- ========== TỰ KIỂM TRA PCCC (dẫn tới tu-kiem-tra.html) ========== -->
+  <section class="section-flush"><div class="container">
+  <div class="check-promo">
+    <div>
+      <h2>Tự kiểm tra PCCC nhà máy trong 3 phút</h2>
+      <p>10 câu hỏi Có/Chưa, biết ngay hạng mục cần xử lý.</p>
+      <a class="btn btn-white btn-lg" href="tu-kiem-tra.html#kiem-tra">Bắt đầu kiểm tra
+        <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+    <!-- Hình minh họa danh sách kiểm tra (chỉ để trang trí) -->
+    <ul class="check-demo" aria-hidden="true">
+      <li>Thẩm duyệt &amp; nghiệm thu PCCC</li>
+      <li>Bảo dưỡng báo cháy, chữa cháy tự động</li>
+      <li class="no">Diễn tập phương án chữa cháy</li>
+      <li>Huấn luyện an toàn theo nhóm</li>
+    </ul>
+  </div>
+</div>
+</section>
+
+  <!-- ========== HỒ SƠ NĂNG LỰC ========== -->
+  <section class="section section-alt" id="ho-so">
+    <div class="container">
+      <div class="section-head split-head">
+        <h2>Dự án &amp; hồ sơ năng lực</h2>
+        <p>Công trình đã thực hiện, giấy phép và đội ngũ phụ trách của TTN.</p>
+      </div>
+      <div class="feature">
+        <figure class="ph ph-1610" data-src="assets/img/anh/du-an.jpg" data-alt="Nhà máy sản xuất, công trình TTN tư vấn">
+  <figcaption class="ph-label">
+    <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+    <strong>Ảnh 8 · Toàn cảnh một công trình TTN đã thực hiện</strong>
+    <span>assets/img/anh/du-an.jpg · 16:10 · ≥ 1600px</span>
+  </figcaption>
+</figure>
+
+        <div class="feature-card">
+          <h3>Hồ sơ năng lực TTN</h3>
+          <p>Dự án, giấy phép và đội ngũ kỹ thuật của TTN.</p>
+          <ul class="feature-list">
+            <li data-need="duAn"><a href="ho-so-nang-luc.html#du-an"><span class="num">01</span>Dự án tiêu biểu<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li>
+            <li data-need="giayPhep"><a href="ho-so-nang-luc.html#giay-phep"><span class="num">02</span>Giấy phép &amp; chứng chỉ<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li>
+            <li data-need="always"><a href="ho-so-nang-luc.html#doi-ngu"><span class="num">03</span>Đội ngũ kỹ thuật<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li>
+          </ul>
+          <a class="btn btn-red" href="ho-so-nang-luc.html">Xem hồ sơ năng lực</a>
+          <svg class="feature-deco" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2c1 4 6 6 6 12a6 6 0 0 1-12 0c0-3 1.5-5 3-6.5.3 2 1.2 3.2 2.5 3.7C11 7.5 11 5 12 2z"/></svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TIN TỨC (lấy từ assets/data/tin-tuc.js) ========== -->
+  <section class="section" id="tin-tuc">
+    <div class="container">
+      <div class="section-head split-head">
+        <h2>Tin tức &amp; kiến thức</h2>
+        <p>Kinh nghiệm thực tế về PCCC và an toàn lao động, viết ngắn gọn để áp dụng ngay.</p>
+      </div>
+      <div class="news-grid" data-news-list data-limit="3"></div>
+      <div class="section-foot"><a class="btn btn-outline" href="tin-tuc.html">Xem tất cả bài viết</a></div>
+    </div>
+  </section>
+
+  <!-- ========== ĐĂNG KÝ THÀNH VIÊN ========== -->
+  <section class="section section-flush" id="thanh-vien">
+    <div class="container">
+      <div class="member">
+        <div>
+          <h2>Đăng ký thành viên, nhận ưu đãi từ TTN</h2>
+          <p class="muted">Đăng ký miễn phí, nhận thông tin hữu ích cho nhà máy của bạn.</p>
+          <ul class="benefits">
+            <li><svg class="i c-red" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12v10H4V12M2 7h20v5H2zM12 22V7M12 7H7.5a2.5 2.5 0 1 1 0-5C11 2 12 7 12 7zM12 7h4.5a2.5 2.5 0 1 0 0-5C13 2 12 7 12 7z"/></svg>Ưu đãi khi sử dụng dịch vụ của TTN</li>
+            <li><svg class="i c-blue" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h4"/></svg>Tài liệu tham khảo PCCC &amp; ATVSLĐ mới</li>
+            <li><svg class="i c-red" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9M13.7 21a2 2 0 0 1-3.4 0"/></svg>Thông báo sớm các lớp huấn luyện</li>
+            <li><svg class="i c-blue" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>Bản tin kiến thức an toàn định kỳ</li>
+          </ul>
+          <p class="note-strip">Đã là thành viên? Gọi hotline <a href="tel:0986637678">098.6637.678</a> để được hỗ trợ.</p>
+        </div>
+        <form class="form-card" data-form data-success="Đăng ký thành công. Cảm ơn bạn đã trở thành thành viên TTN!">
+          <h3>Đăng ký thành viên</h3>
+          <input type="hidden" name="loai_form" value="Đăng ký thành viên">
+          <input type="hidden" name="_subject" value="[Website TTN] Đăng ký thành viên mới">
+          <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <div class="field-row">
+            <div class="field"><label for="m-ten">Họ tên <span class="req">*</span></label><input id="m-ten" name="ho_ten" autocomplete="name" required></div>
+            <div class="field"><label for="m-sdt">Số điện thoại <span class="req">*</span></label><input id="m-sdt" name="so_dien_thoai" type="tel" inputmode="tel" autocomplete="tel" pattern="[0-9 .+]{9,16}" title="Nhập số điện thoại hợp lệ" required></div>
+          </div>
+          <details class="more">
+            <summary>Thêm thông tin (không bắt buộc)</summary>
+            <div class="field-row">
+              <div class="field"><label for="m-email">Email</label><input id="m-email" name="email" type="email" autocomplete="email"></div>
+              <div class="field"><label for="m-cty">Công ty</label><input id="m-cty" name="cong_ty" autocomplete="organization"></div>
+            </div>
+            <div class="field">
+              <label for="m-linhvuc">Lĩnh vực quan tâm</label>
+              <select id="m-linhvuc" name="linh_vuc">
+                <option>Tất cả</option>
+                <option>Tư vấn thiết kế PCCC</option>
+                <option>An Toàn Vệ Sinh Lao Động</option>
+                <option>Huấn luyện &amp; Đào tạo</option>
+              </select>
+            </div>
+          </details>
+          <label class="check"><input type="checkbox" id="m-dongy" name="dong_y" value="Có" required> <span>Tôi đồng ý để TTN liên hệ theo <a href="chinh-sach.html#bao-mat">Chính sách bảo mật</a>.</span></label>
+          <button class="btn btn-red btn-lg" type="submit">Đăng ký thành viên</button>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== LIÊN HỆ ========== -->
+  <section class="section section-alt" id="lien-he">
+    <div class="container split top">
+      <div>
+        <h2>Liên hệ tư vấn</h2>
+        <p class="muted">Gọi hotline hoặc để lại số, kỹ sư TTN sẽ liên hệ lại.</p>
+        <a class="contact-hotline" href="tel:0986637678">
+          <span class="icon-disc white"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></span>
+          <span><span>Hotline 24/7</span><strong>098.6637.678</strong></span>
+        </a>
+        <ul class="contact-list">
+          <li>
+            <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/></svg>
+            <div class="lines">
+              <strong>Technical Support</strong>
+              <a href="tel:0357653339">Mr. Thống · 0357.653.339</a>
+              <a href="tel:0986637678">Mr. Tuấn · 098.6637.678</a>
+              <a href="tel:0983452904">Mr. Nguyên · 098.3452.904</a>
+            </div>
+          </li>
+          <li>
+            <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+            <div><strong>Email</strong><a href="mailto:thongngo.ttn@gmail.com">thongngo.ttn@gmail.com</a></div>
+          </li>
+          <li>
+            <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <div><strong>Địa chỉ</strong><a href="https://www.google.com/maps/search/?api=1&amp;query=Becamex+Tower+230+Dai+lo+Binh+Duong" target="_blank" rel="noopener">Becamex Tower, 230 Đại lộ Bình Dương, P. Phú Lợi, TP. Hồ Chí Minh</a></div>
+          </li>
+          <li>
+            <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            <div><strong>Giờ làm việc</strong>24/7</div>
+          </li>
+        </ul>
+        <div class="social-row">
+          <a class="social-btn zalo" href="https://zalo.me/g/xkvsjp465" target="_blank" rel="noopener"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.4 8.4 0 0 1 3.8-.9h.5a8.5 8.5 0 0 1 8 8v.5z"/></svg>Nhắn Zalo</a>
+          <a class="social-btn" href="https://www.youtube.com/@hoitraloipccc" target="_blank" rel="noopener"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M22.5 6.4a2.8 2.8 0 0 0-2-2C18.8 4 12 4 12 4s-6.8 0-8.5.4a2.8 2.8 0 0 0-2 2A29 29 0 0 0 1 12a29 29 0 0 0 .5 5.6 2.8 2.8 0 0 0 2 2c1.7.4 8.5.4 8.5.4s6.8 0 8.5-.4a2.8 2.8 0 0 0 2-2A29 29 0 0 0 23 12a29 29 0 0 0-.5-5.6z"/><path d="m9.8 15.5 5.7-3.5-5.7-3.5z"/></svg>YouTube</a>
+          <a class="social-btn" href="https://www.facebook.com/groups/hoikysupccc.vn" target="_blank" rel="noopener"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>Facebook</a>
+        </div>
+      </div>
+      <form class="form-card" data-form data-success="Đã gửi yêu cầu. Kỹ sư TTN sẽ liên hệ lại với bạn.">
+        <h3>Gửi yêu cầu tư vấn</h3>
+        <input type="hidden" name="loai_form" value="Liên hệ trang chủ">
+        <input type="hidden" name="_subject" value="[Website TTN] Yêu cầu tư vấn mới">
+        <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <div class="field-row">
+          <div class="field"><label for="c-ten">Họ tên <span class="req">*</span></label><input id="c-ten" name="ho_ten" autocomplete="name" required></div>
+          <div class="field"><label for="c-sdt">Số điện thoại <span class="req">*</span></label><input id="c-sdt" name="so_dien_thoai" type="tel" inputmode="tel" autocomplete="tel" pattern="[0-9 .+]{9,16}" title="Nhập số điện thoại hợp lệ" required></div>
+        </div>
+        <details class="more">
+          <summary>Thêm thông tin (không bắt buộc)</summary>
+          <div class="field"><label for="c-email">Email</label><input id="c-email" name="email" type="email" autocomplete="email"></div>
+          <div class="field">
+            <label for="c-dv">Dịch vụ cần tư vấn</label>
+            <select id="c-dv" name="dich_vu">
+              <option value="">Chọn dịch vụ</option>
+              <option data-key="pccc">Tư vấn thiết kế PCCC</option>
+              <option data-key="atvsld">An Toàn Vệ Sinh Lao Động</option>
+              <option data-key="huan-luyen">Huấn luyện &amp; Đào tạo</option>
+              <option data-key="khac">Khác</option>
+            </select>
+          </div>
+          <div class="field"><label for="c-nd">Nội dung</label><textarea id="c-nd" name="noi_dung" placeholder="Loại công trình, diện tích, nhu cầu cụ thể..."></textarea></div>
+        </details>
+        <button class="btn btn-red btn-lg" type="submit">Gửi yêu cầu tư vấn</button>
+        <p class="form-note">Bằng việc gửi, bạn đồng ý với <a href="chinh-sach.html#bao-mat">Chính sách bảo mật</a>.</p>
+        <p class="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a class="brand" href="index.html">
+        <img src="assets/img/logo-mark.svg" alt="" width="42" height="42">
+        <span class="brand-text"><strong>TTN Fire Safety Solution</strong><span>Safety Today – Happy Tomorrow</span></span>
+      </a>
+      <p>Công ty TNHH PCCC &amp; An Toàn TTN. Tư vấn thiết kế PCCC, an toàn lao động, huấn luyện &amp; đào tạo.</p>
+      <div class="socials">
+        <a class="social social-zalo" href="https://zalo.me/g/xkvsjp465" target="_blank" rel="noopener" aria-label="Nhóm Zalo">Zalo</a>
+        <a class="social" href="https://www.youtube.com/@hoitraloipccc" target="_blank" rel="noopener" aria-label="YouTube">
+          <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M22.5 6.4a2.8 2.8 0 0 0-2-2C18.8 4 12 4 12 4s-6.8 0-8.5.4a2.8 2.8 0 0 0-2 2A29 29 0 0 0 1 12a29 29 0 0 0 .5 5.6 2.8 2.8 0 0 0 2 2c1.7.4 8.5.4 8.5.4s6.8 0 8.5-.4a2.8 2.8 0 0 0 2-2A29 29 0 0 0 23 12a29 29 0 0 0-.5-5.6z"/><path d="m9.8 15.5 5.7-3.5-5.7-3.5z"/></svg>
+        </a>
+        <a class="social" href="https://www.facebook.com/groups/hoikysupccc.vn" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div>
+      <h3>Điều hướng</h3>
+      <ul>
+        <li><a href="gioi-thieu.html">Giới thiệu</a></li>
+        <li><a href="ho-so-nang-luc.html">Hồ sơ năng lực</a></li>
+        <li><a href="tin-tuc.html">Tin tức</a></li>
+        <li><a href="cong-noi-dung.html">Cổng kiến thức</a></li>
+        <li><a href="tai-lieu.html">Thư viện tài liệu</a></li>
+        <li><a href="hoi-dap.html">Hỏi – đáp</a></li>
+        <li><a href="tu-kiem-tra.html">Tự kiểm tra PCCC</a></li>
+        <li><a href="index.html#thanh-vien">Đăng ký thành viên</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Dịch vụ</h3>
+      <ul>
+        <li><a href="dich-vu-pccc.html">Tư vấn thiết kế PCCC</a></li>
+        <li><a href="dich-vu-atvsld.html">An Toàn Vệ Sinh Lao Động</a></li>
+        <li><a href="dich-vu-huan-luyen.html">Huấn luyện &amp; Đào tạo</a></li>
+        <li><a href="tu-van.html#dang-ky">Đăng ký tư vấn</a></li>
+      </ul>
+    </div>
+    <div class="footer-contact">
+      <h3>Liên hệ</h3>
+      <ul>
+        <li>Hotline 24/7: <a href="tel:0986637678"><strong>098.6637.678</strong></a></li>
+        <li>Technical Support – Mr. Thống: <a href="tel:0357653339">0357.653.339</a></li>
+        <li>Technical Support – Mr. Tuấn: <a href="tel:0986637678">098.6637.678</a></li>
+        <li>Technical Support – Mr. Nguyên: <a href="tel:0983452904">098.3452.904</a></li>
+        <li><a href="mailto:thongngo.ttn@gmail.com">thongngo.ttn@gmail.com</a></li>
+        <li>Becamex Tower, 230 Đại lộ Bình Dương, P. Phú Lợi, TP. Hồ Chí Minh</li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>© <span data-year>2026</span> Công ty TNHH PCCC &amp; An Toàn TTN. Bảo lưu mọi quyền.</span>
+    <nav aria-label="Chính sách">
+      <a href="chinh-sach.html#bao-mat">Chính sách bảo mật</a>
+      <a href="chinh-sach.html#dieu-khoan">Điều khoản sử dụng</a>
+    </nav>
+  </div>
+</footer>
+
+<div class="fab">
+  <a class="fab-zalo" href="https://zalo.me/g/xkvsjp465" target="_blank" rel="noopener" aria-label="Nhắn Zalo">Zalo</a>
+  <a class="fab-call" href="tel:0986637678" aria-label="Gọi hotline 098.6637.678">
+    <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+  </a>
+</div>
+
+<nav class="mbar" aria-label="Liên hệ nhanh">
+  <a class="mbar-call" href="tel:0986637678">
+    <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Gọi ngay
+  </a>
+  <a class="mbar-zalo" href="https://zalo.me/g/xkvsjp465" target="_blank" rel="noopener">
+    <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.4 8.4 0 0 1 3.8-.9h.5a8.5 8.5 0 0 1 8 8v.5z"/></svg>Zalo
+  </a>
+  <a class="mbar-form" href="tu-van.html#dang-ky">
+    <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h4"/></svg>Đăng ký
+  </a>
+</nav>
+
+<script src="assets/data/tin-tuc.js"></script>
+<script src="assets/data/tai-lieu.js"></script>
+<script src="assets/data/ho-so.js"></script>
+<script src="assets/data/hoi-dap.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

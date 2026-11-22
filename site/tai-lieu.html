@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#E31E24">
+<link rel="icon" href="assets/img/logo-mark.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&amp;family=Oswald:wght@500;600;700&amp;display=swap">
+<link rel="stylesheet" href="assets/css/style.css">
+<script src="assets/js/config.js"></script>
+<script>
+/* Chế độ chạy thật (cheDoNhap: false trong config.js): ẩn khung chờ và ghi chú ngay từ đầu, không bị nháy */
+if (!(window.TTN_CONFIG || {}).cheDoNhap) document.documentElement.classList.add('is-live');
+</script>
+<script>
+/* Ảnh có data-fb: không tìm thấy .jpg thì thử .jpeg, .png, .webp cùng tên; không có ảnh nào thì ẩn đi */
+window.addEventListener('error', function (e) {
+  var t = e.target, x = ['jpg', 'jpeg', 'png', 'webp'];
+  if (!t || t.tagName !== 'IMG' || !t.hasAttribute('data-fb')) return;
+  var m = (t.getAttribute('src') || '').match(/^(.*)\.(jpe?g|png|webp)$/i), n = +(t.getAttribute('data-fb') || 0);
+  if (m && n < x.length - 1) { t.setAttribute('data-fb', n + 1); t.src = m[1] + '.' + x[(x.indexOf(m[2].toLowerCase()) + 1) % x.length]; }
+  else t.hidden = true;
+}, true);
+</script>
+
+<title>Thư viện tài liệu tham khảo — TTN Fire Safety Solution</title>
+<meta name="description" content="Tiêu chuẩn, quy chuẩn, văn bản pháp luật và biểu mẫu tham khảo về PCCC và an toàn vệ sinh lao động.">
+<link rel="canonical" href="https://firesolutions-ttn.vn/tai-lieu.html">
+</head>
+<body data-page="docs">
+<a class="skip" href="#main">Bỏ qua điều hướng</a>
+<header class="site-header">
+  <div class="container">
+    <div class="header-inner">
+      <a class="brand" href="index.html" data-home aria-label="TTN Fire Safety Solution, về trang chủ">
+        <!-- LOGO: thay file assets/img/logo-mark.svg bằng logo chính thức -->
+        <img src="assets/img/logo-mark.svg" alt="" width="40" height="40">
+        <span class="brand-text"><strong>TTN Fire Safety Solution</strong><span>Safety Today – Happy Tomorrow</span></span>
+      </a>
+      <nav class="nav" id="site-nav" aria-label="Menu chính">
+        <a href="index.html" data-nav="home" data-home>Trang chủ</a>
+        <div class="nav-group">
+          <a class="nav-parent" href="gioi-thieu.html" data-group="about profile">Giới thiệu <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+          <div class="subnav">
+            <a href="gioi-thieu.html" data-nav="about">Về TTN</a>
+            <a href="ho-so-nang-luc.html" data-nav="profile">Hồ sơ năng lực</a>
+          </div>
+        </div>
+        <div class="nav-group">
+          <a class="nav-parent" href="index.html#dich-vu" data-group="svc-pccc svc-atvsld svc-huan-luyen">Dịch vụ <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+          <div class="subnav">
+            <a href="dich-vu-pccc.html" data-nav="svc-pccc">Tư vấn thiết kế PCCC</a>
+            <a href="dich-vu-atvsld.html" data-nav="svc-atvsld">An Toàn Vệ Sinh Lao Động</a>
+            <a href="dich-vu-huan-luyen.html" data-nav="svc-huan-luyen">Huấn luyện &amp; Đào tạo</a>
+          </div>
+        </div>
+        <div class="nav-group">
+          <a class="nav-parent" href="cong-noi-dung.html" data-group="hub news faq docs">Kiến thức <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+          <div class="subnav">
+            <a href="cong-noi-dung.html" data-nav="hub">Cổng kiến thức</a>
+            <a href="tin-tuc.html" data-nav="news">Tin tức &amp; video</a>
+            <a href="hoi-dap.html" data-nav="faq">Hỏi – đáp</a>
+            <a href="tai-lieu.html" data-nav="docs">Thư viện tài liệu</a>
+          </div>
+        </div>
+        <a href="tu-kiem-tra.html" data-nav="check">Tự kiểm tra</a>
+        <a href="index.html#lien-he" data-nav="contact">Liên hệ</a>
+        <a class="btn btn-red nav-cta-mobile" href="tu-van.html#dang-ky">Đăng ký tư vấn</a>
+      </nav>
+      <a class="btn btn-red btn-hotline" href="tel:0986637678" aria-label="Liên Hệ Hotline 098.6637.678">
+        <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+        <span>Liên Hệ Hotline</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Mở menu">
+        <svg class="i i-menu" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+        <svg class="i i-close" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+
+<main id="main">
+
+  <section class="page-hero">
+    <img class="hero-bg" src="assets/img/anh/tai-lieu.jpg" alt="" data-fb>
+    <div class="container">
+      <h1>Thư viện tài liệu tham khảo</h1>
+      <p class="lead">Tiêu chuẩn, quy chuẩn và biểu mẫu PCCC – an toàn lao động.</p>
+      <a class="btn btn-red btn-lg" href="#tim-kiem">Tìm tài liệu
+        <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></a>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="toolbar">
+        <div class="search">
+          <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+          <input id="tim-kiem" type="search" placeholder="Tìm theo tên, số hiệu tài liệu..." aria-label="Tìm tài liệu">
+        </div>
+        <div class="chips" id="doc-filter" role="group" aria-label="Lọc theo nhóm">
+          <button class="chip" type="button" data-nhom="all">Tất cả</button>
+          <button class="chip" type="button" data-nhom="pccc">PCCC</button>
+          <button class="chip" type="button" data-nhom="atvsld">An toàn lao động</button>
+          <button class="chip" type="button" data-nhom="huan-luyen">Huấn luyện</button>
+          <button class="chip" type="button" data-nhom="bieu-mau">Biểu mẫu</button>
+        </div>
+      </div>
+      <p class="result-count" data-doc-count aria-live="polite"></p>
+      <!-- Danh sách lấy từ assets/data/tai-lieu.js -->
+      <ul class="doc-list" data-doc-list></ul>
+    </div>
+  </section>
+
+  <section class="cta">
+  <div class="container cta-wrap">
+    <div class="cta-media">
+      <img src="assets/img/anh/cta.jpg" alt="" loading="lazy" data-fb>
+    </div>
+    <div class="cta-card">
+      <h2>Cần đánh giá an toàn cho nhà máy?</h2>
+      <p>Gửi yêu cầu, kỹ sư TTN sẽ liên hệ lại với bạn.</p>
+      <div class="cta-actions">
+        <a class="btn btn-white btn-lg" href="tu-van.html#dang-ky">Đăng ký tư vấn</a>
+        <a class="cta-phone" href="tel:0986637678">
+          <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+          098.6637.678
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- Hộp nhận tài liệu (tài liệu có dangKy: true trong tai-lieu.js) -->
+<dialog class="gate" data-gate aria-labelledby="gate-title">
+  <form class="gate-form" data-gate-form novalidate>
+    <button class="gate-close" type="button" data-gate-close aria-label="Đóng"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+    <div data-gate-body>
+      <h2 id="gate-title">Nhận tài liệu</h2>
+      <p class="gate-doc" data-gate-doc></p>
+      <input type="hidden" name="loai_form" value="Nhận tài liệu">
+      <input type="hidden" name="_subject" value="[Website TTN] Yêu cầu nhận tài liệu">
+      <input type="hidden" name="ten_tai_lieu" data-gate-name>
+      <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <div class="field"><label for="g-ten">Họ tên <span class="req">*</span></label><input id="g-ten" name="ho_ten" autocomplete="name" required></div>
+      <div class="field"><label for="g-sdt">Số điện thoại <span class="req">*</span></label><input id="g-sdt" name="so_dien_thoai" type="tel" inputmode="tel" autocomplete="tel" pattern="[0-9 .+]{9,16}" title="Nhập số điện thoại hợp lệ" required></div>
+      <div class="field"><label for="g-email">Email</label><input id="g-email" name="email" type="email" autocomplete="email"></div>
+      <button class="btn btn-red btn-lg" type="submit">Nhận tài liệu</button>
+      <p class="form-note">Bằng việc gửi, bạn đồng ý với <a href="chinh-sach.html#bao-mat">Chính sách bảo mật</a>.</p>
+      <p class="form-status" role="status" aria-live="polite"></p>
+    </div>
+    <div class="gate-done" data-gate-done hidden>
+      <span class="icon-disc"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></span>
+      <h2>Cảm ơn bạn!</h2>
+      <p data-gate-msg></p>
+      <a class="btn btn-red btn-lg" data-gate-link href="#" target="_blank" rel="noopener" hidden>Mở tài liệu</a>
+    </div>
+  </form>
+</dialog>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a class="brand" href="index.html">
+        <img src="assets/img/logo-mark.svg" alt="" width="42" height="42">
+        <span class="brand-text"><strong>TTN Fire Safety Solution</strong><span>Safety Today – Happy Tomorrow</span></span>
+      </a>
+      <p>Công ty TNHH PCCC &amp; An Toàn TTN. Tư vấn thiết kế PCCC, an toàn lao động, huấn luyện &amp; đào tạo.</p>
+      <div class="socials">
+        <a class="social social-zalo" href="https://zalo.me/g/xkvsjp465" target="_blank" rel="noopener" aria-label="Nhóm Zalo">Zalo</a>
+        <a class="social" href="https://www.youtube.com/@hoitraloipccc" target="_blank" rel="noopener" aria-label="YouTube">
+          <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M22.5 6.4a2.8 2.8 0 0 0-2-2C18.8 4 12 4 12 4s-6.8 0-8.5.4a2.8 2.8 0 0 0-2 2A29 29 0 0 0 1 12a29 29 0 0 0 .5 5.6 2.8 2.8 0 0 0 2 2c1.7.4 8.5.4 8.5.4s6.8 0 8.5-.4a2.8 2.8 0 0 0 2-2A29 29 0 0 0 23 12a29 29 0 0 0-.5-5.6z"/><path d="m9.8 15.5 5.7-3.5-5.7-3.5z"/></svg>
+        </a>
+        <a class="social" href="https://www.facebook.com/groups/hoikysupccc.vn" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div>
+      <h3>Điều hướng</h3>
+      <ul>
+        <li><a href="gioi-thieu.html">Giới thiệu</a></li>
+        <li><a href="ho-so-nang-luc.html">Hồ sơ năng lực</a></li>
+        <li><a href="tin-tuc.html">Tin tức</a></li>
+        <li><a href="cong-noi-dung.html">Cổng kiến thức</a></li>
+        <li><a href="tai-lieu.html">Thư viện tài liệu</a></li>
+        <li><a href="hoi-dap.html">Hỏi – đáp</a></li>
+        <li><a href="tu-kiem-tra.html">Tự kiểm tra PCCC</a></li>
+        <li><a href="index.html#thanh-vien">Đăng ký thành viên</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Dịch vụ</h3>
+      <ul>
+        <li><a href="dich-vu-pccc.html">Tư vấn thiết kế PCCC</a></li>
+        <li><a href="dich-vu-atvsld.html">An Toàn Vệ Sinh Lao Động</a></li>
+        <li><a href="dich-vu-huan-luyen.html">Huấn luyện &amp; Đào tạo</a></li>
+        <li><a href="tu-van.html#dang-ky">Đăng ký tư vấn</a></li>
+      </ul>
+    </div>
+    <div class="footer-contact">
+      <h3>Liên hệ</h3>
+      <ul>
+        <li>Hotline 24/7: <a href="tel:0986637678"><strong>098.6637.678</strong></a></li>
+        <li>Technical Support – Mr. Thống: <a href="tel:0357653339">0357.653.339</a></li>
+        <li>Technical Support – Mr. Tuấn: <a href="tel:0986637678">098.6637.678</a></li>
+        <li>Technical Support – Mr. Nguyên: <a href="tel:0983452904">098.3452.904</a></li>
+        <li><a href="mailto:thongngo.ttn@gmail.com">thongngo.ttn@gmail.com</a></li>
+        <li>Becamex Tower, 230 Đại lộ Bình Dương, P. Phú Lợi, TP. Hồ Chí Minh</li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>© <span data-year>2026</span> Công ty TNHH PCCC &amp; An Toàn TTN. Bảo lưu mọi quyền.</span>
+    <nav aria-label="Chính sách">
+      <a href="chinh-sach.html#bao-mat">Chính sách bảo mật</a>
+      <a href="chinh-sach.html#dieu-khoan">Điều khoản sử dụng</a>
+    </nav>
+  </div>
+</footer>
+
+<div class="fab">
+  <a class="fab-zalo" href="https://zalo.me/g/xkvsjp465" target="_blank" rel="noopener" aria-label="Nhắn Zalo">Zalo</a>
+  <a class="fab-call" href="tel:0986637678" aria-label="Gọi hotline 098.6637.678">
+    <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+  </a>
+</div>
+
+<nav class="mbar" aria-label="Liên hệ nhanh">
+  <a class="mbar-call" href="tel:0986637678">
+    <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Gọi ngay
+  </a>
+  <a class="mbar-zalo" href="https://zalo.me/g/xkvsjp465" target="_blank" rel="noopener">
+    <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.4 8.4 0 0 1 3.8-.9h.5a8.5 8.5 0 0 1 8 8v.5z"/></svg>Zalo
+  </a>
+  <a class="mbar-form" href="tu-van.html#dang-ky">
+    <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h4"/></svg>Đăng ký
+  </a>
+</nav>
+
+<script src="assets/data/tin-tuc.js"></script>
+<script src="assets/data/tai-lieu.js"></script>
+<script src="assets/data/ho-so.js"></script>
+<script src="assets/data/hoi-dap.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

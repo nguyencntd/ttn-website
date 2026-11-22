@@ -1,0 +1,30 @@
+# Cấu hình cho hosting Apache / cPanel (Netlify, Cloudflare Pages bỏ qua file này)
+
+# Trang báo lỗi khi gõ sai địa chỉ
+ErrorDocument 404 /404.html
+
+# Mặc định mở index.html
+DirectoryIndex index.html
+
+# Bật dòng dưới SAU KHI hosting đã cài SSL (https) — xóa dấu # ở 3 dòng:
+# RewriteEngine On
+# RewriteCond %{HTTPS} off
+# RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Nén file chữ cho trang tải nhanh hơn
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css application/javascript text/javascript image/svg+xml application/xml text/xml
+</IfModule>
+
+# Cho trình duyệt lưu ảnh lâu hơn; HTML, CSS, JS lưu ngắn để thấy cập nhật ngay
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/jpeg "access plus 30 days"
+  ExpiresByType image/png "access plus 30 days"
+  ExpiresByType image/webp "access plus 30 days"
+  ExpiresByType image/svg+xml "access plus 30 days"
+  ExpiresByType text/css "access plus 1 hour"
+  ExpiresByType application/javascript "access plus 1 hour"
+  ExpiresByType text/javascript "access plus 1 hour"
+  ExpiresByType text/html "access plus 0 seconds"
+</IfModule>
